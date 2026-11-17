@@ -1,0 +1,60 @@
+/* Design tokens: colours, fonts and the dark theme.
+   Change colours here and the whole app (and the dashboard) follows. */
+:root {
+  color-scheme: light;
+  --bg: #F4F6FB;
+  --surface: #FFFFFF;
+  --surface2: #ECF0F9;
+  --ink: #101B36;
+  --muted: #59657F;
+  --line: #DAE1EE;
+
+  --brand: #1F4FD8;
+  --on-brand: #FFFFFF;
+  --brand-soft: #E4EBFD;
+  --focus: #1F4FD8;
+
+  --good: #17784B;  --good-bg: #E2F4EA;
+  --warn: #8A5A00;  --warn-bg: #FFF0CC;
+  --bad: #B3261E;   --bad-bg: #FCEAE8;
+
+  /* one colour per module; m6 is speaking */
+  --m1: #1B5BC9; --m2: #0B7A6B; --m3: #A4501A; --m4: #B0284E; --m5: #4F6B10; --m6: #7B3FC4;
+
+  /* colour of word jobs inside lessons */
+  --sb-bg: #D9E6FB; --vb-bg: #FDE0CC; --ob-bg: #D5F0E4; --ad-bg: #E8DAFA; --tm-bg: #FFEFB3;
+
+  --display: "Bricolage Grotesque", "Trebuchet MS", system-ui, sans-serif;
+  --body: "Atkinson Hyperlegible", "Segoe UI", system-ui, sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, Consolas, monospace;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --bg: #0C1424; --surface: #152038; --surface2: #1C2A47; --ink: #E8EDF7; --muted: #9AA7C4; --line: #2A3857;
+    --brand: #7FA2FF; --on-brand: #0C1424; --brand-soft: #1F2F58; --focus: #7FA2FF;
+    --good: #5ED39C; --good-bg: #12372A; --warn: #F2C25B; --warn-bg: #4A3A0E; --bad: #FF8F85; --bad-bg: #3E1F22;
+    --m1: #74A8FF; --m2: #4FD0BA; --m3: #EE9A60; --m4: #FF8FA8; --m5: #B5D865; --m6: #C79BFF;
+    --sb-bg: #22407A; --vb-bg: #6E3814; --ob-bg: #17503D; --ad-bg: #472C74; --tm-bg: #5E4D10;
+  }
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --bg: #0C1424; --surface: #152038; --surface2: #1C2A47; --ink: #E8EDF7; --muted: #9AA7C4; --line: #2A3857;
+  --brand: #7FA2FF; --on-brand: #0C1424; --brand-soft: #1F2F58; --focus: #7FA2FF;
+  --good: #5ED39C; --good-bg: #12372A; --warn: #F2C25B; --warn-bg: #4A3A0E; --bad: #FF8F85; --bad-bg: #3E1F22;
+  --m1: #74A8FF; --m2: #4FD0BA; --m3: #EE9A60; --m4: #FF8FA8; --m5: #B5D865; --m6: #C79BFF;
+  --sb-bg: #22407A; --vb-bg: #6E3814; --ob-bg: #17503D; --ad-bg: #472C74; --tm-bg: #5E4D10;
+}
+
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body { margin: 0; background: var(--bg); color: var(--ink); font: 18px/1.6 var(--body); }
+body.big { font-size: 20px; }
+h1, h2, h3 { font-family: var(--display); text-wrap: balance; margin: 0; }
+p { margin: 0 0 12px; }
+:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; }
+.label, .qlabel { font: 500 .74rem/1.2 var(--mono); letter-spacing: .1em; text-transform: uppercase; color: var(--muted); display: block; margin: 0 0 8px; }
+.note { color: var(--muted); font-size: .93rem; }
+@media (prefers-reduced-motion: reduce) { * { animation: none !important; transition: none !important; } }

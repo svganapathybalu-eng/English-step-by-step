@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <title>English Step by Step</title>
+  <meta name="description" content="Learn English basics on your own: lessons, practice and speaking tasks.">
+  <meta name="theme-color" content="#1F4FD8">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="icons/icon-192.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Bricolage+Grotesque:wght@600;800&family=IBM+Plex+Mono:wght@500&display=swap">
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+  <header class="top">
+    <div class="top-in">
+      <div class="brand" id="brand">English Step by Step</div>
+      <div id="chips" style="display:flex;gap:8px"></div>
+    </div>
+  </header>
+  <main id="view" tabindex="-1"></main>
+  <nav class="nav" id="nav" aria-label="Main menu"></nav>
+  <noscript><p style="padding:24px">This course needs JavaScript. Please turn it on in your browser.</p></noscript>
+
+  <!-- 1. settings -->
+  <script src="config.js"></script>
+  <!-- 2. content (add new lesson files here) -->
+  <script src="content/api.js"></script>
+  <script src="content/01-words-and-sentences.js"></script>
+  <script src="content/02-helping-verbs-and-modals.js"></script>
+  <script src="content/03-tenses.js"></script>
+  <script src="content/04-more-basics.js"></script>
+  <script src="content/05-speaking-lab.js"></script>
+  <!-- 3. the app -->
+  <script src="js/util.js"></script>
+  <script src="js/store.js"></script>
+  <script src="js/speech.js"></script>
+  <script src="js/track.js"></script>
+  <script src="js/blocks.js"></script>
+  <script src="js/steps.js"></script>
+  <script src="js/player.js"></script>
+  <script src="js/views.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

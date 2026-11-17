@@ -1,0 +1,1 @@
+{"name":"english-step-by-step","version":"2.0.0","private":true,"description":"Self-study English course with speaking practice. No build step.","scripts":{"check":"node tools/check-content.js","start":"npx serve ."}}
